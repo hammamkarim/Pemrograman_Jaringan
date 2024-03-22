@@ -47,6 +47,7 @@ Membuat objek soket untuk server dengan menggunakan alamat IPv4 (AF_INET) dan ti
 
 •	client_socket.close() : Menutup koneksi dengan klien saat selesai 
 berkomunikasi dengan klien tersebut.
+
 •	except socket.timeout : Menangkap pengecualian jika timeout terjadi.
 
 •	Finally : Bagian akhir yang akan dieksekusi terlepas dari apakah ada pengecualian atau tidak.
