@@ -1,11 +1,10 @@
-**LAPORAN PRAKTIKUM PEMROGRAMAN JARINGAN
-“Client – Server (Single Thread)”**
-
+# **LAPORAN PRAKTIKUM PEMROGRAMAN JARINGAN “Client – Server (Single Thread)”**
 
 Nama : Hammam Jauharul Karim
 
 NIM : 1203222050
 
+## Soal Nomer 1
 1.	Membuat sebuah program server yang dapat menerima koneksi dari klien menggunakan protokol TCP. Server ini akan menerima pesan dari klien dan mengirimkan pesan balasan berisi jumlah karakter pada pesan tersebut. Gunakan port 12345 untuk server. Membuat analisa dari hasil program tersebut
 
 Screenshot :
@@ -15,7 +14,7 @@ Screenshot :
 ![Screenshot 2024-03-20 181118](https://github.com/hammamkarim/Pemrograman_Jaringan/assets/114963944/ec06bea6-42cc-40e0-be2c-3af6b9fbb32f)
 
 
-#Analisa Code
+### Analisa Code
 
 Program tersebut adalah implementasi dari server socket menggunakan modul socket. Ini adalah server yang sederhana yang akan menerima koneksi dari klien, mengirimkan pesan ke klien, dan kemudian menutup koneksi. Adapun penjelasan singkat mengenai baris code tersebut kurang lebih sebagai berikut :
 
@@ -54,7 +53,7 @@ berkomunikasi dengan klien tersebut.
 
 •	server_socket.close() : Menutup soket server.
 
-	Analisa Hasil
+### Analisa Hasil
 
 •	Menampilkan pesan "Server listening on localhost:12345..." saat server siap menerima koneksi.
 
@@ -65,6 +64,17 @@ berkomunikasi dengan klien tersebut.
 •	Menampilkan pesan "Batas waktu socket telah habis, mohon sambungkan kembali" jika terjadi timeout.
 
 •	Menampilkan pesan kesalahan jika terjadi exception.
+
+## Soal Nomer  2 
+
+2.	Membuat sebuah program klien yang dapat terhubung ke server yang telah dibuat pada soal nomor 2. Klien ini akan mengirimkan pesan ke server berupa inputan dari pengguna dan menampilkan pesan balasan jumlah karakter yang diterima dari server. Membuat analisa dari hasil program tersebut
+
+Screenshot :
+
+![4](https://github.com/hammamkarim/Pemrograman_Jaringan/assets/114963944/3b40d80a-4c7c-4992-b777-1e7482123f25)
+
+
+![Screenshot 2024-03-20 181101](https://github.com/hammamkarim/Pemrograman_Jaringan/assets/114963944/51c949a7-35a8-4df6-990f-c90453c7228b)
 
 
 
