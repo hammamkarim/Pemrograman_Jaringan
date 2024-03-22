@@ -76,6 +76,52 @@ Screenshot :
 
 ![Screenshot 2024-03-20 181101](https://github.com/hammamkarim/Pemrograman_Jaringan/assets/114963944/51c949a7-35a8-4df6-990f-c90453c7228b)
 
+### Analisa Code
+
+Program implementasi dari sebuah client sederhana menggunakan modul socket. Client ini digunakan untuk terhubung ke server yang telah diimplementasikan sebelumnya. Adapun penjelasan singkat mengenai baris code tersebut kurang lebih sebagai berikut
+
+•	import socket : Mengimpor modul socket yang digunakan untuk berkomunikasi melalui jaringan menggunakan socket.
+
+•	def main() : Mendefinisikan fungsi utama main().
+
+•	client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) : Membuat objek soket untuk klien dengan menggunakan alamat IPv4 (AF_INET) dan tipe soket stream (SOCK_STREAM).
+
+•	server_address = ('localhost', 12345) : Menentukan alamat dan port server yang akan disambung oleh klien. Dalam hal ini, klien akan terhubung ke localhost (127.0.0.1) pada port 12345, sesuai dengan server yang telah diimplementasikan sebelumnya.
+
+•	print(f'Connecting to {server_address}...') : Mencetak pesan bahwa klien sedang terhubung ke server yang ditentukan.
+
+•	client_socket.connect(server_address) : Membuat koneksi ke server menggunakan alamat dan port yang telah ditentukan sebelumnya.
+
+•	while True : Memulai loop tak terbatas untuk mengirim pesan ke server dan menerima respons dari server.
+
+•	message = input('Masukkan Pesan: ') : Meminta pengguna untuk memasukkan pesan yang akan dikirimkan ke server.
+
+•	client_socket.sendall(message.encode()) : Mengirim pesan yang telah dimasukkan oleh pengguna ke server setelah mengkodeknya menjadi byte.
+
+•	data = client_socket.recv(1024) : Menerima data/respons dari server dengan maksimal 1024 bytes.
+
+•	print(f'Menerima data dari server: {data.decode()}') : Mencetak pesan/respons yang diterima dari server setelah didekodekan dari byte menjadi string.
+
+•	except ConnectionAbortedError : Menangkap pengecualian jika koneksi dengan server terputus.
+
+•	except KeyboardInterrupt : Menangkap pengecualian jika pengguna menekan tombol keyboard (CTRL+C) untuk menutup koneksi dengan server.
+
+•	client_socket.close() : Menutup koneksi dengan server setelah selesai berkomunikasi.
+
+•	if __name__ == '__main__' : Fungsi main() akan dijalankan saat file dieksekusi sebagai skrip utama.
+
+### Analisa Hasil
+
+•	Menampilkan pesan "Connecting to localhost:12345..." saat mencoba terhubung ke server.
+
+•	Meminta pengguna untuk memasukkan pesan.
+
+•	Menampilkan pesan respons dari server setelah mengirim pesan.
+
+•	Menampilkan pesan "Koneksi telah habis, mohon sambungkan kembali" jika koneksi terputus secara tiba-tiba.
+
+•	Menampilkan pesan "Koneksi Ditutup" saat program client ditutup dengan KeyboardInterrupt.
+
 
 
 
